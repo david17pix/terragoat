@@ -6,6 +6,8 @@ resource random_string "password" {
   min_upper   = 1
 }
 #TESTE
+
+
 resource azurerm_linux_virtual_machine "linux_machine" {
   admin_username                  = "terragoat-linux"
   admin_password                  = random_string.password.result
